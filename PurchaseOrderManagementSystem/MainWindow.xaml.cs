@@ -1,5 +1,5 @@
 ﻿using PurchaseOrder.BusinessLogic;
-using PurchaseOrder.Models;
+using PurchaseOrder.Models.Product;
 using System.Windows;
 
 namespace PurchaseOrderManagementSystem
@@ -15,7 +15,7 @@ namespace PurchaseOrderManagementSystem
 
             var _productService = new ProductService();
 
-            var createProduct = new CreateProductModels
+            var createProduct = new CreateProductModel
             { ProductName = "XYZ" };
 
             _productService.CreateProduct(createProduct);
