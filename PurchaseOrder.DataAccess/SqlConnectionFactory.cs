@@ -17,7 +17,7 @@ namespace PurchaseOrder.DataAccess
             _connectionString = connectionString;
         }
 
-        public IDbConnection CreateConnection()
+        public SqlConnection CreateConnection()
         {
             return new SqlConnection(_connectionString);
         }

@@ -1,4 +1,4 @@
-﻿using PurchaseOrder.Models;
+﻿using PurchaseOrder.Models.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,7 @@ namespace PurchaseOrder.BusinessLogic
 {
     public interface IProductService
     {
-        void CreateProduct(CreateProductModels createProduct);
+        void CreateProduct(CreateProductModel createProduct);
+        void UpdateProduct(UpdateProductModel updateProduct);
     }
 }

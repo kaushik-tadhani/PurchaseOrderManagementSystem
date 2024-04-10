@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PurchaseOrder.Models
+namespace PurchaseOrder.Models.Product
 {
-    public class CreateProductModels : ProductModel
+    public class UpdateProductModel : ProductModel
     {
-        
     }
 }

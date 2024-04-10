@@ -1,5 +1,5 @@
 ﻿using PurchaseOrder.DataAccess;
-using PurchaseOrder.Models;
+using PurchaseOrder.Models.Product;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +12,19 @@ namespace PurchaseOrder.BusinessLogic
     {
         private readonly IGenericRepository<ProductModel> _productRepository;
 
-        public ProductService(IGenericRepository<ProductModel> productRepository)
+        public ProductService()
         {
-            _productRepository = productRepository;
+            _productRepository = new GenericRepository<ProductModel>("Product");
         }
 
-        public void CreateProduct(CreateProductModels createProduct)
+        public void CreateProduct(CreateProductModel createProduct)
         {
             _productRepository.Insert(createProduct);
+        }
+
+        public void UpdateProduct(UpdateProductModel updateProduct)
+        {
+            _productRepository.Update(updateProduct);
         }
     }
 }
