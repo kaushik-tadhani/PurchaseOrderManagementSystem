@@ -15,7 +15,7 @@ namespace PurchaseOrder.DataAccess
 
         public GenericRepository(string tableName)
         {
-            _connectionFactory = new SqlConnectionFactory("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Kaushik\\Colleage\\PurchaseOrderManagementSystem\\PurchaseOrderManagementSystem\\DataBase\\PurchaseOrderManagementSystem.mdf;Integrated Security=True");
+            _connectionFactory = new SqlConnectionFactory("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\PrateekDrive\\High Quality Software programming\\project final\\PurchaseOrderManagementSystem\\DataBase\\PurchaseOrderManagementSystem.mdf\";Integrated Security=True");
             _tableName = tableName;
         }
 
