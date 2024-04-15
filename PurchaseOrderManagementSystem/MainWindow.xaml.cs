@@ -1,5 +1,5 @@
 ﻿using PurchaseOrder.BusinessLogic;
-using PurchaseOrder.Models;
+using PurchaseOrder.Models.Product;
 using System.Windows;
 
 namespace PurchaseOrderManagementSystem
@@ -15,9 +15,11 @@ namespace PurchaseOrderManagementSystem
             
         }
 
-        private void CloseApp_Click(object sender, RoutedEventArgs e)
-        {
+            var createProduct = new CreateProductModels
+            { ProductName = "XYZ" };
 
+            _productService.CreateProduct(createProduct);
+            
         }
     }
 }
