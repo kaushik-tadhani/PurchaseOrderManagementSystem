@@ -9,12 +9,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\home_page.png" />
+    <None Remove="Images\img_home.png" />
+    <None Remove="Images\img_product.png" />
+    <None Remove="Images\product_page.png" />
+    <None Remove="Images\shutdown_def.png" />
+    <None Remove="Images\shutdown_mo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Unity" Version="5.11.10" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\PurchaseOrder.BusinessLogic\PurchaseOrder.BusinessLogic.csproj" />
     <ProjectReference Include="..\PurchaseOrder.Models\PurchaseOrder.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\home_page.png" />
+    <Resource Include="Images\img_home.png" />
+    <Resource Include="Images\img_product.png" />
+    <Resource Include="Images\product_page.png" />
+    <Resource Include="Images\shutdown_def.png" />
+    <Resource Include="Images\shutdown_mo.png" />
   </ItemGroup>
 
 </Project>

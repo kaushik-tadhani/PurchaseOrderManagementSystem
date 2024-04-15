@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:PurchaseOrderManagementSystem.ViewModel"
+                    xmlns:view="clr-namespace:PurchaseOrderManagementSystem.View">
+
+    <DataTemplate DataType="{x:Type vm:ProductVM}">
+        <view:Product />
+    </DataTemplate>
+</ResourceDictionary>

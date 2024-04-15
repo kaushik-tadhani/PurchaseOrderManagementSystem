@@ -12,14 +12,12 @@ namespace PurchaseOrderManagementSystem
         public MainWindow()
         {
             InitializeComponent();
-
-            var _productService = new ProductService();
-
-            var createProduct = new CreateProductModels
-            { ProductName = "XYZ" };
-
-            _productService.CreateProduct(createProduct);
             
+        }
+
+        private void CloseApp_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

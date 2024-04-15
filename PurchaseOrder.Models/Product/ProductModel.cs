@@ -9,6 +9,6 @@ namespace PurchaseOrder.Models.Product
     public class ProductModel
     {
         public int ProductId { get; set; }
-        public required string ProductName { get; set; }
+        public string ProductName { get; set; }
     }
 }

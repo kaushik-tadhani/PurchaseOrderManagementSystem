@@ -3,10 +3,43 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PurchaseOrderManagementSystem"
+        xmlns:vm="clr-namespace:PurchaseOrderManagementSystem.ViewModel"
+        xmlns:Menu="clr-namespace:PurchaseOrderManagementSystem.Utilities"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow"
+        Height="1020"
+        Width="1920"
+        WindowStyle="SingleBorderWindow">
+    <Window.DataContext>
+        <vm:NavigationVM/>
+    </Window.DataContext>
 
+    <Grid>
+        <Border Background="#F3F3F3"/>
+        <Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="288"/>
+                    <ColumnDefinition Width="562"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+
+            <Grid HorizontalAlignment="Left" Width="270">
+                <Border Background="#F3F3F3" />
+
+                <StackPanel Margin="10,0,10,0">
+                    <Menu:Btn Style="{StaticResource BtnStyle}" Command="{Binding ProductCommand}" IsChecked="True">
+                        <Grid>
+                            <TextBlock Text="Product" Style="{StaticResource Text_Style}" Margin="15,0,0,0"/>
+                        </Grid>
+                    </Menu:Btn>
+                </StackPanel>
+            </Grid>
+            <Grid Margin="288,0,0,0">
+                <ContentControl x:Name="Pages" Content="{Binding CurrentView}" Margin="0,0,0,0"/>
+            </Grid>
+        </Grid>
     </Grid>
+
 </Window>
