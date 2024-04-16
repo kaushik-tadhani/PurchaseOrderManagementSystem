@@ -6,4 +6,8 @@
     <DataTemplate DataType="{x:Type vm:ProductVM}">
         <view:Product />
     </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:VendorVM}">
+        <view:Vendor />
+    </DataTemplate>
 </ResourceDictionary>

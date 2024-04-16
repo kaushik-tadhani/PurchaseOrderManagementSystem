@@ -7,9 +7,11 @@
         xmlns:Menu="clr-namespace:PurchaseOrderManagementSystem.Utilities"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="1020"
-        Width="1920"
-        WindowStyle="SingleBorderWindow">
+        Height="600"
+        Width="1080"
+        ResizeMode="CanMinimize"
+        WindowStyle="SingleBorderWindow"
+        WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <vm:NavigationVM/>
     </Window.DataContext>
@@ -21,23 +23,32 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="288"/>
-                    <ColumnDefinition Width="562"/>
+                    <ColumnDefinition Width="792"/>
                 </Grid.ColumnDefinitions>
-            </Grid>
+                <Grid HorizontalAlignment="Left" Width="288" Grid.Column="0">
+                    <Border Background="#F3F3F3" />
 
-            <Grid HorizontalAlignment="Left" Width="270">
-                <Border Background="#F3F3F3" />
-
-                <StackPanel Margin="10,0,10,0">
-                    <Menu:Btn Style="{StaticResource BtnStyle}" Command="{Binding ProductCommand}" IsChecked="True">
-                        <Grid>
-                            <TextBlock Text="Product" Style="{StaticResource Text_Style}" Margin="15,0,0,0"/>
-                        </Grid>
-                    </Menu:Btn>
-                </StackPanel>
-            </Grid>
-            <Grid Margin="288,0,0,0">
-                <ContentControl x:Name="Pages" Content="{Binding CurrentView}" Margin="0,0,0,0"/>
+                    <StackPanel Margin="10,0,10,0">
+                        <Menu:Btn Style="{StaticResource BtnStyle}" Command="{Binding ProductCommand}" IsChecked="True">
+                            <Grid>
+                                <TextBlock Text="Product" Style="{StaticResource Text_Style}" Margin="15,0,0,0"/>
+                            </Grid>
+                        </Menu:Btn>
+                        <Menu:Btn Style="{StaticResource BtnStyle}" Command="{Binding VendorCommand}">
+                            <Grid>
+                                <TextBlock Text="Vendor" Style="{StaticResource Text_Style}" Margin="15,0,0,0"/>
+                            </Grid>
+                        </Menu:Btn>
+                        <Menu:Btn Style="{StaticResource BtnStyle}">
+                            <Grid>
+                                <TextBlock Text="Purchase Order" Style="{StaticResource Text_Style}" Margin="15,0,0,0"/>
+                            </Grid>
+                        </Menu:Btn>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <ContentControl x:Name="Pages" Content="{Binding CurrentView}" Margin="0,0,0,0"/>
+                </Grid>
             </Grid>
         </Grid>
     </Grid>

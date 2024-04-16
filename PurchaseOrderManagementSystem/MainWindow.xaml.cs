@@ -14,12 +14,5 @@ namespace PurchaseOrderManagementSystem
             InitializeComponent();
             
         }
-
-            var createProduct = new CreateProductModels
-            { ProductName = "XYZ" };
-
-            _productService.CreateProduct(createProduct);
-            
-        }
     }
 }

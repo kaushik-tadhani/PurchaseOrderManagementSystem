@@ -19,11 +19,16 @@ namespace PurchaseOrderManagementSystem.ViewModel
 
         public ICommand ProductCommand { get; set; }
 
+        public ICommand VendorCommand { get; set; }
+
         private void Product(object obj) => CurrentView = new ProductVM();
+
+        private void Vendor(object obj) => CurrentView = new VendorVM();
 
         public NavigationVM() 
         { 
             ProductCommand = new RelayCommand(Product);
+            VendorCommand = new RelayCommand(Vendor);
 
             // Startup page
             CurrentView = new ProductVM();
