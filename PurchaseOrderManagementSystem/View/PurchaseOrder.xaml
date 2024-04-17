@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="PurchaseOrderManagementSystem.View.PurchaseOrder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PurchaseOrderManagementSystem.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid x:Name="Form_Grid" Margin="0,4,0,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="489*"/>
+            <RowDefinition Height="182*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="391*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Product Id: *" HorizontalAlignment="Left" Margin="34,109,0,0" VerticalAlignment="Top" Grid.Column="3" FontWeight="Bold" Height="26" Width="81"/>
+        <TextBox x:Name="pid" HorizontalAlignment="Left" Margin="79,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Grid.Column="5" Height="18"/>
+        <Label x:Name="Purchase_Order_Management_System" Grid.Column="3" Content="Purchase Order Management System" HorizontalAlignment="Left" Margin="34,33,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" Grid.ColumnSpan="3" Height="39" Width="392"/>
+        <Label Content="Product Type:" HorizontalAlignment="Left" Margin="34,220,0,0" VerticalAlignment="Top" Grid.Column="3" FontWeight="Bold" Width="99" Height="26" Grid.ColumnSpan="2"/>
+        <Label Content="Product Description:" HorizontalAlignment="Left" Margin="34,277,0,0" VerticalAlignment="Top" Grid.Column="3" FontWeight="Bold" Grid.ColumnSpan="2" Width="132" Height="26"/>
+        <TextBox x:Name="pdesc" HorizontalAlignment="Left" Margin="79,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Grid.Column="5" TextChanged="pdesc_TextChanged" Height="18"/>
+        <Label Content="Vendor:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="3" FontWeight="Bold" Margin="34,332,0,0" RenderTransformOrigin="-0.546,0.451" Height="26" Width="54"/>
+        <Label Content="Product Name:" HorizontalAlignment="Left" Margin="34,160,0,0" VerticalAlignment="Top" Grid.Column="3" FontWeight="Bold" Width="99" Height="26" Grid.ColumnSpan="2"/>
+        <Label x:Name="Quantity" Content="Quantity: *" HorizontalAlignment="Left" Margin="34,384,0,0" VerticalAlignment="Top" Grid.Column="3" FontWeight="Bold" Height="26" Width="71"/>
+        <TextBox x:Name="quantity" HorizontalAlignment="Left" Margin="79,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Grid.Column="5" Text="0" Height="18"/>
+        <Label Content="Unit Price:" HorizontalAlignment="Left" Margin="34,447,0,0" VerticalAlignment="Top" Grid.Column="3" FontWeight="Bold" Height="28" Width="69"/>
+        <TextBox x:Name="uprice" HorizontalAlignment="Left" Margin="79,449,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Grid.Column="5" Text="$0.00" Background="{x:Null}" Height="18"/>
+        <Label Content="Total Cost:" HorizontalAlignment="Left" Margin="34,14,0,0" VerticalAlignment="Top" Grid.Column="3" FontWeight="Bold" Width="81" Height="26" Grid.Row="1"/>
+        <Label Grid.Column="5" Content="Provide number of units" HorizontalAlignment="Left" Margin="79,404,0,0" VerticalAlignment="Top" Height="19" Width="157" FontSize="8" FontWeight="Bold"/>
+        <Label Grid.Column="5" Content="Unique product ID" HorizontalAlignment="Left" Margin="79,132,0,0" VerticalAlignment="Top" Height="21" Width="157" FontSize="8" FontWeight="Bold"/>
+        <Button x:Name="submit" Grid.Column="4" Content="Submit Order" HorizontalAlignment="Left" Margin="48,105,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Click="Submit" Height="20" Width="76" Grid.Row="1"/>
+        <CheckBox x:Name="_1" Grid.Column="5" Content="Bakery" HorizontalAlignment="Left" Margin="79,214,0,0" VerticalAlignment="Top" Height="15" Width="56"/>
+        <CheckBox x:Name="_2" Grid.Column="5" Content="Grocery" HorizontalAlignment="Left" Margin="165,216,0,0" VerticalAlignment="Top" Height="15" Width="62"/>
+        <CheckBox x:Name="_3" Grid.Column="5" Content="Dairy" HorizontalAlignment="Left" Margin="256,213,0,0" VerticalAlignment="Top" Height="15" Width="48"/>
+        <CheckBox x:Name="_4" Grid.Column="5" Content="Produce" HorizontalAlignment="Left" Margin="79,242,0,0" VerticalAlignment="Top" Height="15" Width="64"/>
+        <CheckBox x:Name="_5" Grid.Column="5" Content="Meat" HorizontalAlignment="Left" Margin="164,242,0,0" VerticalAlignment="Top" Height="15" Width="48"/>
+        <CheckBox x:Name="_6" Grid.Column="5" Content="Cheese &amp; Deli" HorizontalAlignment="Left" Margin="256,242,0,0" VerticalAlignment="Top" Height="15" Width="95"/>
+        <TextBox x:Name="pname1" Grid.Column="5" HorizontalAlignment="Left" Margin="79,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="18"/>
+        <TextBox x:Name="pvendor" HorizontalAlignment="Left" Margin="79,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Grid.Column="5" Height="18"/>
+        <TextBox x:Name="pcost" Grid.Column="5" HorizontalAlignment="Left" Margin="79,20,0,0" TextWrapping="Wrap" Text="$0.00" VerticalAlignment="Top" Width="148" Height="18" Grid.Row="1"/>
+
+    </Grid>
+</UserControl>
